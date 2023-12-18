@@ -25,9 +25,6 @@ class RobotControlMoveit():
         self.move_group = moveit_commander.MoveGroupCommander(self.group_name)
         self.move_group.set_end_effector_link(self.tcp_link)
         
-        self.init_gazebo_services()
-        self.get_gazebo_box_links()
-        
         rospy.loginfo("Robot is ready now.")
         rospy.sleep(1)
 
